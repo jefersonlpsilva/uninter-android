@@ -19,5 +19,12 @@ public class TerceiraActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if ((intent.hasExtra("retorno")) && ( null != intent.getStringExtra("retorno")))
           valorParametro.setText(intent.getStringExtra("retorno"));
+        else if ((intent.hasExtra("cliente")) && (null !=intent.getSerializableExtra("cliente"))){
+            Cliente cliente = (Cliente)intent.getSerializableExtra("cliente");
+            valorParametro.setText("Cliente informando:"+ cliente.getNome()+"- "+cliente.getIdade()+" anos ");
+        }
+
+
+
     }
 }

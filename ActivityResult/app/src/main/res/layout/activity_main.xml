@@ -39,5 +39,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/btnArgumento" android:layout_below="@id/btnOpcao"
             android:layout_marginTop="42dp" android:layout_centerHorizontal="true"/>
+    <Button
+            android:text="Enviar Pojo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btnEnviaPojo" android:layout_below="@id/btnArgumento"
+            android:layout_marginTop="42dp" android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

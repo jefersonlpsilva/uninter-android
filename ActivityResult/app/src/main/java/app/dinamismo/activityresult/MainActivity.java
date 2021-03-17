@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     TextView resultado;
     Button btnOpcao;
     Button btnArgumento;
+    Button btnEnviaPojo;
+
     static int ACAO_BUSCA_PREFERENCIA_USER = 1;
 
     @Override
@@ -22,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         btnOpcao =(Button)findViewById(R.id.btnOpcao);
         //ligamos o componente btnArgumento a representacao no arquivo xml
         btnArgumento = (Button)findViewById(R.id.btnArgumento);
+
+        btnEnviaPojo = (Button) findViewById(R.id.btnEnviaPojo);
+
         //redefinir o listener OnClickListener
         btnOpcao.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -39,6 +44,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnEnviaPojo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Cliente cliente = new Cliente();
+                cliente.setNome("Jeferson");
+                cliente.setIdade(43);
+                cliente.setEndereco("Rua São Paulo, 319, apto 202, centro, sao leopoldo");
+
+                Intent intent = new Intent(view.getContext(), TerceiraActivity.class);
+                intent.putExtra("cliente",cliente);
+                startActivity(intent);
+            }
+        });
+
     }
 
     //Monitoramente do retorna a actividade
