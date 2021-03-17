@@ -2,6 +2,8 @@ package app.dinamismo.activitylifecycle;
 
 import android.content.Intent;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -14,8 +16,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(ACTIVITY, "onCreate()");
-        Intent intent = new Intent(this, SegundaActivity.class);
-        startActivity(intent);
+
+        //Adiciona reconhce o botao(objeto) do arquivo xml
+        Button btnSegundaActivity = (Button)findViewById(R.id.button);
+        //
+        btnSegundaActivity.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(v.getContext(), SegundaActivity.class);
+                        startActivity(intent);
+                    }
+                }
+        );
     }
 
     @Override
