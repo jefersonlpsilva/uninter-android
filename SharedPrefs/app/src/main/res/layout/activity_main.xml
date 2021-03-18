@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentEnd="true" android:layout_centerHorizontal="false" android:id="@+id/layoutPrincipal">
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btnAzul" android:background="#FF15279A"
+            android:layout_alignParentStart="true" android:layout_alignTop="@+id/btnVermelho"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btnVermelho" android:background="#ff0011"
+            android:layout_centerHorizontal="true" android:layout_alignTop="@+id/btnVerde"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btnVerde" android:background="#37ff00"
+            android:layout_alignParentTop="true" android:layout_alignParentEnd="true" android:layout_marginTop="112dp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btnAmarelo" android:background="#ffe100"
+            android:layout_alignParentStart="true" android:layout_marginTop="51dp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btnCeleste"
+            android:layout_alignTop="@+id/btnAmarelo"
+            android:layout_centerHorizontal="true" android:background="#00fff7"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btnLaranja" android:background="#ff8000"
+            android:layout_alignTop="@+id/btnCeleste" android:layout_alignStart="@+id/btnVerde"/>
+    <TextView
+            android:text="Texto:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/txtTexto" android:layout_marginTop="98dp"
+            android:layout_below="@+id/btnAmarelo" android:layout_alignParentStart="true"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/edtNome" android:layout_alignBottom="@+id/txtTexto"
+            android:layout_alignEnd="@+id/btnLaranja" android:layout_toEndOf="@+id/btnAmarelo"
+            android:inputType="text"/>
+    <Button
+            android:text="Gravar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btnGravar" android:layout_below="@+id/edtNome"
+            android:layout_centerHorizontal="true" android:layout_marginTop="45dp"/>
+</RelativeLayout>
